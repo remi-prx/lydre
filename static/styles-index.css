@@ -1,0 +1,121 @@
+body[data-initial="true"] {
+    transition: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: white; /*104713*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: 1s color ease, 1s background ease;
+}
+
+.dark-mode body{
+    background-color: black;
+}
+
+.section {
+    color: black;
+    border-radius: 5px;
+    border : 1px solid #07920e;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+
+  font-family: "Afacad Flux", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+
+    transition: 1s color ease;
+}
+
+.section-text-part h3{
+    font-size: 25px;
+}
+
+.section-text-part{
+    margin: auto;
+}
+
+.section-text-part p{
+    font-size: 22px;
+    max-width: 75%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.section-img-part img{
+    max-width: 450px;
+    padding: 25px;
+}
+
+.main-div {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    color: black;
+}
+
+.header {
+    background: #07920e;
+    padding: 10px;
+    margin-top: 0;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img{
+    max-width: 50px;
+    height: auto;
+    margin-left: 50px;
+}
+.header h1{
+    margin: 0 20px; 
+}
+
+.header button{
+    margin-right: 50px;
+}
+
+
+hr {
+    color: #07920e;
+}
+
+.footer {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    background-color: #07920e; 
+    position: relative; 
+    width: 1fr;
+}
+
+.footer img{
+    max-width: 100px;
+}
+
+
+
+
+.dark-mode .section{
+    color: white;
+}
+
+
+.dark-mode .main-div{
+    color: white;
+}
+
+
+
+.no-transition {
+    transition: none;
+}
