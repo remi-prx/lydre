@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
+    let lastScroll = 0;
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+        let currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll) {
+            header.style.transform = `translateY(-${header.offsetHeight}px)`;
+        } else {
+            header.style.transform = 'translateY(0)';
+        }
+        lastScroll = currentScroll;
+    });
+
     console.log("DOMContentLoaded")
     
     const darkMode = localStorage.getItem("dark-mode");
