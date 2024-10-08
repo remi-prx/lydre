@@ -92,6 +92,7 @@ body {
 }
 
 .main-div {
+    margin-top: 70px;
     flex: 1;
     text-align: center;
     align-items: center;
@@ -108,6 +109,10 @@ body {
     text-align: center;
     justify-content: space-between;
     align-items: center;
+    transition: color 1s ease,  transform 0.3s ease;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
 }
 
 .header img{
