@@ -46,11 +46,49 @@ body {
     max-width: 75%;
     margin: auto;
     margin-top: 40px;
+    min-width: 75%;
+    margin-bottom:40px;
 }
 
 .section-img-part img{
     max-width: 450px;
     padding: 25px;
+
+    transition: max-width 1s ease;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .section-img-part img{
+        max-width: 250px;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .section {
+        color: black;
+        border-radius: 5px;
+        border: 1px solid #07920e;
+        display: grid;
+        grid-template-columns: 1fr; /* une seule colonne */
+    
+        font-family: "Afacad Flux", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-variation-settings: "slnt" 0;
+    
+        transition: 1s color ease;
+    }
+    .section .section-text-part {
+        order: 2;
+    }
+
+    .section .section-img-part {
+        order: 1;
+    }
+
 }
 
 .main-div {
@@ -88,6 +126,9 @@ body {
 hr {
     color: #07920e;
 }
+
+
+
 
 .footer {
     color: #fff;
