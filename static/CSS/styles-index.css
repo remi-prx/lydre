@@ -43,6 +43,7 @@ body {
 
 .section-text-part p{
     font-size: 22px;
+    text-align: justify;
     max-width: 75%;
     margin: auto;
     margin-top: 40px;
