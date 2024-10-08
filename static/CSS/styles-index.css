@@ -96,6 +96,7 @@ body {
     text-align: center;
     align-items: center;
     color: black;
+    transition: color 1s ease;
 }
 
 .header {
