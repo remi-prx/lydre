@@ -1,20 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
     let lastScroll = 0;
     const header = document.querySelector('.header');
+    const scrollThreshold = 90;
+    let isThrottled = false;
 
     window.addEventListener('scroll', () => {
-        let currentScroll = window.pageYOffset;
+        if (isThrottled) return;
 
-        if (currentScroll > lastScroll) {
+        let currentScroll = window.scrollY;
+        console.log(currentScroll>scrollThreshold)
+
+        if (currentScroll <= scrollThreshold) {
+            header.style.transform = 'translateY(0)';
+        } else if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
             header.style.transform = `translateY(-${header.offsetHeight}px)`;
-        } else {
+        } else if (currentScroll < lastScroll) {
             header.style.transform = 'translateY(0)';
         }
+
         lastScroll = currentScroll;
+
+        isThrottled = true;
+        setTimeout(() => {
+            isThrottled = false;
+        }, 100);
     });
 
-    console.log("DOMContentLoaded")
-    
+    console.log("DOMContentLoaded");
+
     const darkMode = localStorage.getItem("dark-mode");
 
     if (darkMode === "enabled") {
