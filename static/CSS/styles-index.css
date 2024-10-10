@@ -23,11 +23,11 @@ body {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
 
-  font-family: "Afacad Flux", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-variation-settings:
+font-family: "Afacad Flux", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal;
+font-variation-settings:
     "slnt" 0;
 
     transition: 1s color ease;
@@ -93,7 +93,7 @@ body {
 }
 
 .main-div {
-    margin-top: 70px;
+    margin-top: 90px;
     flex: 1;
     text-align: center;
     align-items: center;
@@ -101,25 +101,82 @@ body {
     transition: color 1s ease;
 }
 
-.header {
-    background: #07920e;
-    padding: 10px;
+.header{
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    transition: color 1s ease,  transform 0.3s ease;
+    padding-top:5px;
     margin-top: 0;
+    background: #07920e;
+}
+
+.first-header-part {
+    width: 100%;
     color: white;
     display: flex;
     text-align: center;
     justify-content: space-between;
     align-items: center;
-    transition: color 1s ease,  transform 0.3s ease;
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
+    padding-bottom: 5px;
 }
 
+.direction-selector{
+    background-color: white;
+    color:black;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-bottom: #07920e 1px solid;
+    transition: 1s ease color, 1s ease background-color;
+}
+
+.dark-mode .direction-selector{
+    background-color: #000;
+    color:white;
+}
+
+.direction-selector .choice{
+    transition: 1s ease color;
+    cursor:pointer;
+    margin-left : 15px;
+    margin-right: 15px;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+    font-weight: 200;
+    color: grey;
+    transition: 0.2s ease color;
+}
+
+.direction-selector .choice:hover{
+    margin-left : 15px;
+    margin-right: 15px;
+    cursor:pointer;
+    padding: 5px 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+.dark-mode .direction-selector .choice:hover{
+    color: white;
+}
+
+.direction-selector .current-choice {
+    color: #000;
+    transition: 1s ease color;
+}
+
+.dark-mode .direction-selector .current-choice{
+    color: white;
+}
 .header img{
     max-width: 50px;
     height: auto;
     margin-left: 50px;
+    filter:drop-shadow(3px 3px 7px #000);
 }
 .header h1{
     margin: 0 20px; 
@@ -136,6 +193,44 @@ hr {
 
 
 
+.links-container{
+    background-color: #07920e80;
+    border-radius: 5px;
+    border: 1px solid #07920e;
+    width: fit-content;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    height: 40px;
+    font-weight: 200;
+}
+
+.link{
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 200;
+    color: black;
+    text-decoration: none;
+}
+.dark-mode .link{
+    color: white;
+}
+
+.link img{
+    max-width: 20px;
+    max-height: 20px;
+    margin-right: 10px; 
+    transition: filter 1s ease;
+}
+
+.dark-mode .link img{
+    filter: invert(1);
+}
 
 .footer {
     color: #fff;
@@ -148,6 +243,7 @@ hr {
 
 .footer img{
     max-width: 100px;
+    filter:drop-shadow(3px 3px 7px #000);
 }
 
 
