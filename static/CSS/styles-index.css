@@ -110,6 +110,8 @@ font-variation-settings:
     padding-top:5px;
     margin-top: 0;
     background: #07920e;
+    align-items:center;
+    justify-content:space-between;
 }
 .header {
     padding: 10px;
