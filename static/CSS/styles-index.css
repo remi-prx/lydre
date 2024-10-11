@@ -111,6 +111,11 @@ font-variation-settings:
     margin-top: 0;
     background: #07920e;
 }
+.header {
+    background: #214d7b;
+    padding: 10px;
+    margin-top: 0;
+}
 
 .first-header-part {
     width: 100%;
@@ -173,9 +178,9 @@ font-variation-settings:
     color: white;
 }
 .header img{
-    max-width: 50px;
+    max-width: 40px;
     height: auto;
-    margin-left: 50px;
+    margin-left: 40px;
     filter:drop-shadow(3px 3px 7px #000);
 }
 .header h1{
