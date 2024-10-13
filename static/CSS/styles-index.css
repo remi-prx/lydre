@@ -112,10 +112,7 @@ font-variation-settings:
     background: #07920e;
     align-items:center;
     justify-content:space-between;
-}
-.header {
-    padding: 10px;
-    margin-top: 0;
+    color:white;
 }
 
 .first-header-part {
