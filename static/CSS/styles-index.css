@@ -113,7 +113,9 @@ font-variation-settings:
     align-items:center;
     justify-content:space-between;
     color:white;
+    padding:10px;
 }
+
 
 .first-header-part {
     width: 100%;
